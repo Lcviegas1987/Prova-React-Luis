@@ -10,7 +10,7 @@ function Cards(props){
     <div>Cards</div>
   
     return(
-        <React.Fragment>
+    <React.Fragment>
         <Body className="sidebar-menu-collapsed"></Body>
         <Div className="se-pre-con"></Div> 
             
@@ -38,12 +38,12 @@ function Cards(props){
 
         
         <ListGroup as = "ul" className="nav nav-pills nav-stacked custom-nav"></ListGroup>
-          <ListItem><Link to ="index.js"/><i className="fa fa-tachometer"></i><span> Dashboard</span>
+          <ListItem><Link to ="index.js"/><i className="fa fa-tachometer"></i><Span> Dashboard</Span>
           </ListItem>
-          <ListItem><Link to ="cards.js"/><i className="fa fa-cogs"></i> <span>Default cards</span></ListItem>
-          <LisItem><Link to ="pricing.js"/><i className="fa fa-table"></i> <span>Pricing tables</span></ListItem>
-          <ListItem><Link to ="blocks.js"/><i className="fa fa-th"></i> <span>Content blocks</span></ListItem>
-          <ListItem><Link to ="forms.js"/><i className="fa fa-file-text"></i> <span>Forms</span></ListItem>
+          <ListItem><Link to ="cards.js"/><i className="fa fa-cogs"></i> <Span>Default cards</Span></ListItem>
+          <LisItem><Link to ="pricing.js"/><i className="fa fa-table"></i> <Span>Pricing tables</Span></ListItem>
+          <ListItem><Link to ="blocks.js"/><i className="fa fa-th"></i> <Span>Content blocks</Span></ListItem>
+          <ListItem><Link to ="forms.js"/><i className="fa fa-file-text"></i> <Span>Forms</Span></ListItem>
        
         
         <Button type="toggle-btn" onclick="toggleMenu()">
@@ -66,7 +66,7 @@ function Cards(props){
             </FormDefault>
           
           <Div className="profile_details"></Div>
-            <ListGroup as "ul">
+            <ListGroup as = "ul"></ListGroup>
               <ListItem className="dropdown profile_details_drop"></ListItem>
                 <Link to ="#" className="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu3" aria-haspopup="true"
                   aria-expanded="false"></Link>
@@ -82,19 +82,12 @@ function Cards(props){
                     <h5 className="user-name">John Deo</h5>
                     <Span className="status ml-2">Available</Span>
                     <ListItem><Link to ="#"/><i className="lnr lnr-user"></i>My Profile</ListItem> 
-                  <ListItem> <Link to ="#"><i className="lnr lnr-users"></i>1k Followers </ListItem>
-                  <ListItem> <a href="#"><i className="lnr lnr-cog"></i>Setting </ListItem>
-                  <ListItem> <a href="#"><i className="lnr lnr-heart"></i>100 Likes </ListItem>
+                  <ListItem> <Link to ="#"/><i className="lnr lnr-users"></i>1k Followers </ListItem>
+                  <ListItem> <Link to ="#"/><i className="lnr lnr-cog"></i>Setting </ListItem>
+                  <ListItem> <Link to ="#"/><i className="lnr lnr-heart"></i>100 Likes </ListItem>
                   <ListItem className="logout"> <a href="#sign-up.html"><i className="fa fa-power-off"></i> Logout</a> </ListItem>
                 
-           
-        
-      
-    
-    
-
-    
-    <Div className="main-content"></Div>
+           <Div className="main-content"></Div>
       
       <Div className="container-fluid content-top-gap"></Div>
         
@@ -149,9 +142,9 @@ function Cards(props){
                       erat.
                     </p>
                     <Footer className="blockquote-footer text-white">
-                      <small>
+                      <Small>
                         Someone famous in <cite title="Source Title">Source Title</cite>
-                      </small>
+                      </Small>
                     </Footer>
                   </blockquote>
                 
@@ -159,23 +152,23 @@ function Cards(props){
                   <Div className="card-body"></Div>
                     <h5 className= "card-title">Card title</h5>
                     <p className="card-text  mb-4">This card has a regular title and short paragraphy of text below it.</p>
-                    <p className="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <p className="card-text"><Small className="text-muted">Last updated 3 mins ago</Small></p>
                   
                 
                 <Div className="card"></Div>
                   <Image source={required("assets/images/dashboard.jpg")}/>
                 
                 <Div className="card p-3 text-right"></Div>
-                  <blockquote className="blockquote mb-0">
+                  <Blockquote className="blockquote mb-0">
                     <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
                       ante.
                     </p>
                     <Footer className="blockquote-footer">
-                      <small className="text-muted">
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                      </small>
-                    </footer>
-                  </blockquote>
+                      <Small className="text-muted">
+                        Someone famous in <Cite title="Source Title">Source Title</Cite>
+                      </Small>
+                    </Footer>
+                  </Blockquote>
                 
                 <Div className="card"></Div>
                   <Div className ="card-body"></Div>
@@ -183,7 +176,7 @@ function Cards(props){
                     <p className="card-text  mb-4">This is another card with title and supporting text below. This card has
                       some
                       additional content to make it slightly taller overall.</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                    <p className="card-text"><Small className="text-muted">Last updated 3 mins ago</Small></p>
                 
           
 
@@ -215,7 +208,7 @@ function Cards(props){
                 
                 <Col mb={4}></Col>
                   <Div className="card"></Div>
-                        <Image source={required("./assets/images/cart.jpg")}>
+                        <Image source={required("./assets/images/cart.jpg")}/>
                         <Div className="card-body"></Div>
                         <h5 className="card-title">Card title</h5>
                         <p className="card-text">This is a longer card with supporting text below as a natural lead-in to
@@ -226,7 +219,7 @@ function Cards(props){
             
                 <Col mb={4}></Col>
                   <Div className="card"></Div>
-                    <Image source={"required('./assets/images/dashboard.jpg")}/>
+                    <Image source={required('./assets/images/dashboard.jpg')}/>
                     <Div className="card-body"></Div>
                       <h5 className="card-title">Card title</h5>
                       <p className="card-text">This is a longer card with supporting text below as a natural lead-in to
@@ -234,14 +227,9 @@ function Cards(props){
                         content. This content is a little bit longer.</p>
                     
                 
-                
-            
-          
-
-        
     </React.Fragment>
     
- );
+ )
 }
 export default Cards
 
