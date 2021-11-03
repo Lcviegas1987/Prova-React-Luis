@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from '../../assets/images/logo'
-import {nav, Section,Div,ListItem,ListGroup,span,Col} from 'react-bootstrap'
+import {nav, Section,Div,ListItem,ListGroup,span,Col, Input} from 'react-bootstrap'
 
 
 
@@ -25,20 +25,20 @@ function Blocks (props) {
        </Div>
     
        <Div className="logo-icon text-center">
-       <Image source={require('../../assets/images/logo.png')}></Image>
+       {/* <Image source={require('../../assets/images/logo.png')}></Image> */}
        </Div>
         
        <Div className="sidebar-menu-inner"></Div>
-       <Urnordered className="nav nav-pills nav-stacked custom-nav"></Urnordered>
+       <ListGroup as = "ul" className="nav nav-pills nav-stacked custom-nav"></ListGroup>
        <ListItem>
        <a href="index.html"><Item className="fa fa-tachometer"></Item><span> Dashboard</span></a>
        </ListItem>
-          <Urnordered>
+          <ListGroup as ="ul">
           <LisItem><a href="cards.html"><i class="fa fa-cogs"></i> <span>Default cards</span></a></ListItem>
           <ListItem><a href="pricing.html"><i class="fa fa-table"></i> <span>Pricing tables</span></a></ListItem>
           <ListItem><a href="blocks.html"><i class="fa fa-th"></i> <span>Content blocks</span></a></ListItem>
           <ListItem><a href="forms.html"><i class="fa fa-file-text"></i> <span>Forms</span></a></ListItem>
-        </Urnordered>
+        </ListGroup>
         <a class="toggle-btn" onclick="toggleMenu()">
           <Item className="fa fa-angle-double-left menu-collapsed__left"><span>Collapse Sidebar</span></Item>
           <Item class="fa fa-angle-double-right menu-collapsed__right"></Item>
@@ -51,7 +51,7 @@ function Blocks (props) {
         <Div classNam="navbar user-panel-top">
           <Div class="search-box">
             <FormDefault title ="#search-results.html" method="get">
-              <Input label="search-input" placeholder="Search Here..." type="search" id="search">
+              <Button label="search-input" placeholder="Search Here..." type="search" id="search">
               <Button label="search-submit" value=""><span class="fa fa-search"></span></Button>
             </FormDefault>
           </Div>
@@ -61,7 +61,7 @@ function Blocks (props) {
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu3" aria-haspopup="true"
                   aria-expanded="false">
                   <Div class="profile_img">
-                    <Image source={require("../assets/images/profileimg.jpg" className="rounded-circle" alt="")} />
+                    <Image source={require("../assets/images/profileimg.jpg")} />
                     <Div class="user-active">
                       <Span></Span>
                     </Div>
@@ -194,7 +194,7 @@ function Blocks (props) {
         <Div className="w3l-about1 card card_border p-lg-5 p-3 mb-4">
           <Div className="card-body py-3 p-0">
             <h3 className="block__title mb-lg-4">Content Block Features with photo</h3>
-            <Row className = "cwp23-content">
+            <Row className = "cwp23-content"></Row>
               <Col md={6} className ="cwp23-text">
                 <Row className = "row cwp23-text-cols">
                   <Col md={6} mt={4}>
@@ -202,11 +202,11 @@ function Blocks (props) {
                     <a href="#url">Web design</a>
                     <p>Type your text here... Lorem ipsum dolor sit amet. </p>
                   </Col>
-                  < Col md={6} mt={4}>
+                  <Col md={6} mt={4}>
                     <span class="fa fa-paint-brush icon-fea" aria-hidden="true"></span>
                     <a href="#url">Graphic design</a>
                     <p>Type your text here... Lorem ipsum dolor sit amet. </p>
-                  </Div>
+                  </Col>
                   <Div className="col-md-6 column mt-4">
                     <Span className="fa fa-signal icon-fea" aria-hidden="true"></Span>
                     <a href="#url">Web development</a>
@@ -219,9 +219,9 @@ function Blocks (props) {
                   </Div>
                 </Row>
               </Col>
-              <Div className ="col-md-6 mt-md-0 mt-5 cwp23-img">
-                <Image source={require('../../assets/images/template2.jpg')} class="img-fluid rounded" alt=""/>
-              </Div>
+              <Col md ={6} mt md={0} mt={5} className = "cwp23-img">
+                {/* <Image source={require('../../assets/images/template2.jpg')} class="img-fluid rounded" alt=""/> */}
+              </Col>
             </Div>
           </Div>
         </Div>
