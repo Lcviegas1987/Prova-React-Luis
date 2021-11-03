@@ -1,12 +1,14 @@
 import React from 'react';
 import {Body, Col, Row, ListItem, ListGroup, Section, navbar, Container,Forms} from "react-bootstrap"
 import Image from './assets/images/'
+import FormDefault from '../../components/macros/Foms/FormDefault';
+import Input from '../../components/micro/Forms/Input/Input';
 
 
 function Forms (props){
 
     return(
-        <>
+        <React.Fragment>
         <Body className="sidebar-menu-collapsed"></Body>
         <Div className="se-pre-con"></Div> 
         <Section>
@@ -26,9 +28,9 @@ function Forms (props){
     </Div>
       
 
-      {/* <Div className="logo-icon text-center">
-        <a href="index.html" title="logo"><img src="assets/images/logo.png" alt="logo-icon"> </a>
-      </Div> */}
+      <Div className="logo-icon text-center">
+        <a href="index.html" title="logo"><Image source={required("./assets/images/logo.png")}/> </a>
+      </Div>
       
 
       <Div className="sidebar-menu-inner">
@@ -57,10 +59,10 @@ function Forms (props){
       <Div className="menu-right">
         <Div className="navbar user-panel-top">
           <Div className="search-box">
-            <form action="#search-results.html" method="get">
-              <input class="search-input" placeholder="Search Here..." type="search" id="search">
-              <button class="search-submit" value=""><span class="fa fa-search"></span></button>
-            </form>
+            <FormDefault title ="#search-results.html">
+              <Input label="search-input" placeholder="Search Here..." type="search" id="search"/>
+              <Buton label="search-submit" value=""><Span className="fa fa-search"></Span></Button>
+            </FormDefault>
           </Div>
           <Div className="profile_details">
             <ListGroup as = "ul"> 
@@ -92,12 +94,12 @@ function Forms (props){
       </Div>
     </Div>
     
-    </Div>
+    
    
-    <Div className="main-content">
+    <Div className="main-content"></Div>
 
       
-      <Div className="container-fluid content-top-gap">
+      <Div className="container-fluid content-top-gap"></Div>
 
         
         <nav aria-label="breadcrumb" class="mb-4">
@@ -107,61 +109,61 @@ function Forms (props){
           </ListGroup>
         </nav>
        
-        <Section className="forms">
+        <Section className="forms"></Section>
           
           <Div className="card card_border py-2 mb-4">
             <Div className="cards__heading">
               <h3>Forms <Span></Span></h3>
             </Div>
             <Div className="card-body">
-              <Form  action="#" method="post">
+              <FormDefautl title="#">
                 <Div className="form-group">
                   <Label for="exampleInputEmail1" className="input__label">Email address</Label>
                   <Input type="email" className="form-control input-style" id="exampleInputEmail1"
-                    aria-describedby="emailHelp" placeholder="Enter email">
+                    aria-describedby="emailHelp" placeholder="Enter email"/>
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with
                     anyone else.</small>
                 </Div>
                 <Div className="form-group">
                   <Label for="exampleInputPassword1" className="input__label">Password</Label>
-                  <Input type="password" className="form-control input-style" id="exampleInputPassword1"
-                    placeholder="Password">
+                  <Input label="password" type = "password"/>
+                
                 </Div>
                 <Div className="form-check check-remember check-me-out">
-                  <Input type="checkbox" className="form-check-input checkbox" id="exampleCheck1">
+                  <Input label="checkbox" className="form-check-input checkbox" id="exampleCheck1"/>
                   <Label className="form-check-label checkmark" for="exampleCheck1">Check me out</Label>
                 </Div>
                 <Button type="submit" className= "btn btn-primary btn-style mt-4">Submit</Button>
-              </Form>
+              </FormDefault>
             </Div>
           </Div>
          
           <Div className ="card card_border py-2 mb-4">
             <Div className="card-body">
-              <form action="#" method="post">
+              <FormDefault title="#" method="post">
                 <Div className="form-row">
                   <Div className="form-group col-md-6">
                     <Label for="inputEmail4" className="input__label">Email</Label>
-                    <Input type="email" className="form-control input-style" id="inputEmail4" placeholder="Email">
+                    <Input label="email" type = "text" placeholder="Email"/>
                   </Div>
                   <Div className="form-group col-md-6">
                     <Label for="inputPassword4" className="input__label">Password</Label>
-                    <Input type="password" className="form-control input-style" id="inputPassword4" placeholder="Password">
+                    <Input label="password" type="password"/>
                   </Div>
                 </Div>
                 <Div className="form-group">
                   <Label for="inputAddress" className="form-control input-input__label">Address</Label>
-                  <Input type="text" class="form-control input-style" id="inputAddress" placeholder="1234 Main St">
+                  <Input label="endereco" type="text"placeholder="1234 Main St"/>
                 </Div>
                 <Div className="form-group">
                   <Label for="inputAddress2" className="input__label">Address 2</Label>
-                  <Input type="text" className="form-control input-style" id="inputAddress2"
-                    placeholder="Apartment, studio, or floor">
+                  <Input label = "adrres2" type="text" className="form-control input-style" id="inputAddress2"
+                    placeholder="Apartment, studio, or floor"/>
                 </Div>
                 <Row>
                   <Col md={6}>
                     <Label for="inputCity" className="input__label">City</Label>
-                    <Input type="text" className="form-control input-style" id="inputCity">
+                    <Input label = "city" type="text" className="form-control input-style" id="inputCity"/>
                   </Col>
                   <Col md={4}>
                     <Label for="inputState" className="input__label">State</Label>
@@ -172,17 +174,17 @@ function Forms (props){
                   </Col>
                   <Col md={2}>
                     <Label for="inputZip" className="input__label">Zip</Label>
-                    <Input type="text" className="form-control input-style" id="inputZip">
+                    <Input label = "zipcode" type="text" className="form-control input-style" id="inputZip"/>
                   </Col>
                 </Row>
                 <Div className="form-check check-remember check-me-out">
-                  <Input className="form-check-input checkbox" type="checkbox" id="gridCheck">
+                  <Input label ="form-check-input checkbox" type="checkbox" id="gridCheck"/>
                   <Label className="form-check-label checkmark" for="gridCheck">
                     Check me out
                   </Label>
                 </Div>
                 <Button type="submit" className="btn btn-primary btn-style mt-4">Sign in</Button>
-              </Form>
+              </FormDefault>
             </Div>
           </Div>
          
@@ -191,8 +193,8 @@ function Forms (props){
 
         </Section>
        
-  
-    </>
+        
+    </React.Fragment>
     )
 }
 
