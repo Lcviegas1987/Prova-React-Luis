@@ -1,6 +1,6 @@
 import React from 'react'
 import reactDom from 'react-dom';
-import {Col, ListItem, ListGroup, Row, Col, Body, Form} from 'react-bootstrap'
+import {Col, ListItem, ListGroup, Row, Col, Body, Form, Section} from 'react-bootstrap'
 
 
 function Cards(props){
@@ -20,14 +20,14 @@ function Cards(props){
       </Div>
 
      
-    <Div className="logo">
-      <a href="index.html">
+        <Div className="logo">
+        <a href="index.html">
         <img src="image-path" alt="Your logo" title="Your logo" class="img-fluid" style="height:35px;" />
-      </a>
-    </Div>
+        </a>
+        </Div>
       
 
-      <Div className="logo-icon text-center">
+      < Div className="logo-icon text-center">
         <a href="index.html" title="logo"><img src="assets/images/logo.png" alt="logo-icon"> </a>
       </Div>
 
@@ -106,21 +106,21 @@ function Cards(props){
           </ol>
         </nav>
         
-        <section class="template-cards">
+        <Section className="template-cards"></Section>
           
-          <div class="card card_border mb-5">
-            <div class="cards__heading">
+          <Div className="card card_border mb-5">
+            <Div className="cards__heading">
               <h3>Card Columns</h3>
-            </div>
-            <div class="card-body">
-              <div class="card-columns">
-                <div class="card">
-                  <img src="assets/images/cart.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title that wraps to a new line</h5>
-                    <p class="card-text mb-4">This is a longer card with supporting text below as a natural lead-in to
+            </Div>
+            <Div className="card-body">
+              <Div className="card-columns">
+                <Div className="card">
+                  <Image source={required("assets/images/cart.jpg")}/>
+                  <Div className="card-body">
+                    <h5 className="card-title">Card title that wraps to a new line</h5>
+                    <p className="card-text mb-4">This is a longer card with supporting text below as a natural lead-in to
                       additional content. This content is a little bit longer.</p>
-                  </div>
+                  </Div>
                 </Div>
                 <Div className="card p-3">
                   <blockquote className ="blockquote mb-0 card-body">
@@ -255,7 +255,7 @@ function Cards(props){
       
     </Div>
     
-  </Section>
+ 
 
 
     
@@ -267,5 +267,6 @@ function Cards(props){
 
     )
 }
+export default Cards
 
 
