@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from '../../assets/images/logo'
+import {nav, Section,Div,ListItem,ListGroup,span,Col} from 'react-bootstrap'
 
 
 
@@ -55,64 +56,63 @@ function Blocks (props) {
             </FormDefault>
           </Div>
           <Div class="profile_details">
-            <Urnordered>
+            <ListGroup as = "ul">
               <ListItem class="dropdown profile_details_drop">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu3" aria-haspopup="true"
                   aria-expanded="false">
                   <Div class="profile_img">
-                    <Image source="assets/images/profileimg.jpg" class="rounded-circle" alt="" />
+                    <Image source={require("../assets/images/profileimg.jpg" className="rounded-circle" alt="")} />
                     <Div class="user-active">
-                      <span></span>
-                    </div>
-                  </div>
+                      <Span></Span>
+                    </Div>
+                  </Div>
                 </a>
-                <ul class="dropdown-menu drp-mnu" aria-labelledby="dropdownMenu3">
-                  <li class="user-info">
+                <ListGroup as ="ul" className="dropdown-menu drp-mnu" aria-labelledby="dropdownMenu3">
+                  <ListItem class="user-info">
                     <h5 class="user-name">John Deo</h5>
-                    <span class="status ml-2">Available</span>
-                  </li>
-                  <li> <a href="#"><i class="lnr lnr-user"></i>My Profile</a> </li>
-                  <li> <a href="#"><i class="lnr lnr-users"></i>1k Followers</a> </li>
-                  <li> <a href="#"><i class="lnr lnr-cog"></i>Setting</a> </li>
-                  <li> <a href="#"><i class="lnr lnr-heart"></i>100 Likes</a> </li>
-                  <li class="logout"> <a href="#sign-up.html"><i class="fa fa-power-off"></i> Logout</a> </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--notification menu end -->
-    </div>
-    <!-- //header-ends -->
-    <!-- main content start -->
-    <div class="main-content">
+                    <Span class="status ml-2">Available</Span>
+                  </ListItem>
+                  <ListItem> <a href="#"><i class="lnr lnr-user"></i>My Profile</a> </ListItem>
+                  <ListItem> <a href="#"><i class="lnr lnr-users"></i>1k Followers</a> </ListItem>
+                  <ListItem> <a href="#"><i class="lnr lnr-cog"></i>Setting</a> </ListItem>
+                  <ListItem> <a href="#"><i class="lnr lnr-heart"></i>100 Likes</a> </ListItem>
+                  <ListItem class="logout"> <a href="#sign-up.html"><i class="fa fa-power-off"></i> Logout</a> </ListItem>
+                </ListGroup>
+              </ListItem>
+            </ListGroup>
+          </Div>
+        </Div>
+      </Div>
+    </Div>
+    
+    
+   
+    <Div className="main-content">
 
-      <!-- content -->
-      <div class="container-fluid content-top-gap">
+      
+      <Div className =" container-fluid content-top-gap">
 
-        <!-- breadcrumbs -->
+        
         <nav aria-label="breadcrumb" class="mb-4">
-          <ol class="breadcrumb my-breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Elements</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Content Blocks</li>
-          </ol>
+          <ListGroup as = "ul" class="breadcrumb my-breadcrumb">
+            <ListItem class="breadcrumb-item"><a href="index.html">Home</a></ListItem>
+            <ListItem class="breadcrumb-item"><a href="#">Elements</a></ListItem>
+            <ListItem class="breadcrumb-item active" aria-current="page">Content Blocks</ListItem>
+          </ListGroup>
         </nav>
-        <!-- //breadcrumbs -->
+        
 
-        <!-- card heading -->
-        <div class="cards__heading">
+        
+        <Div className="cards__heading">
           <h3>Content Blocks</h3>
-        </div>
-        <!-- //card heading -->
+        </Div>
+      
 
-        <!-- content block style 1-->
-        <div class="card card_border p-lg-5 p-3 mb-4">
-          <div class="card-body py-3 p-0">
-            <div class="row">
-              <div class="col-lg-6 align-self pr-lg-4">
+        
+        <Div className="card card_border p-lg-5 p-3 mb-4">
+          <Div className="card-body py-3 p-0">
+            <Row>
+              <Col lg={6} align-self pr={lg-4}>
                 <h3 class="block__title mb-lg-4">About Content Block</h3>
                 <p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusa ntium corrupti
                   neque sunt labore veritatis. </p>
@@ -121,63 +121,62 @@ function Blocks (props) {
                   praesentium aut, labore veritatis. Eaque, similique aspernatur. Perferendis doloremque ut
                   praesentium vel voluptatum quasi dolor explicabo nobis ex?</p>
                 <a href="#read" class="btn btn-style btn-primary"> Read More</a>
-              </div>
-              <div class="col-lg-6 pl-lg-4 mt-lg-0 mt-4">
+              </Col>
+              <Col lg={6} pl lg={4} mt-lg={0} mt={4}>
                 <img src="assets/images/template2.jpg" alt="" class="img-fluid rounded" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- //content block style 1-->
+              </Col>
+            </Row>
+          </Div>
+        </Div>
+        
 
-        <!-- content block style 2-->
-        <div class="card card_border p-lg-5 p-3 mb-4">
-          <div class="card-body py-3 p-0">
-            <div class="row">
-              <div class="col-lg-6 pr-lg-4">
+        <Div className="card card_border p-lg-5 p-3 mb-4">
+          <Div className="card-body py-3 p-0">
+            <Row>
+              <Col lg={6} pr lg={4}>
                 <img src="assets/images/template1.jpg" alt="" class="img-fluid rounded" />
-              </div>
-              <div class="col-lg-6 align-self pl-lg-4 mt-lg-0 mt-4">
-                <h3 class="block__title mb-lg-4">Content Block with 2 buttons</h3>
-                <p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusa ntium corrupti neque
+              </Col>
+              <Col lg={6 } align-self pl lg={4} mt lg={0} mt={4}>
+                <h3 className="block__title mb-lg-4">Content Block with 2 buttons</h3>
+                <p className="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusa ntium corrupti neque
                   sunt
                   praesentium aut, labore veritatis. Eaque, similique aspernatur. Perferendis doloremque ut
                   praesentium vel voluptatum quasi dolor explicabo nobis ex?</p>
-                <p class="mb-lg-5 mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusa ntium corrupti
+                <p className="mb-lg-5 mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusa ntium corrupti
                   neque sunt labore veritatis.</p>
-                <a href="#read" class="btn btn-style btn-primary mr-2"> Read More</a>
-                <a href="#more" class="btn btn-style border-btn"> Contact Us</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- //content block style 2-->
+                <a href="#read" className="btn btn-style btn-primary mr-2"> Read More</a>
+                <a href="#more" className="btn btn-style border-btn"> Contact Us</a>
+              </Col>
+            </Row>
+          </Div>
+        </Div>
+        
 
-        <!-- content block style 6 -->
-        <div class="card card_border p-lg-5 p-3 mb-4">
-          <div class="card-body py-3 p-0">
-            <h3 class="block__title mb-lg-4">Content Block Features</h3>
-            <div class="row feature-3 text-center">
-              <div class="col-md-4 three-grids-columns mt-5">
-                <span class="fa fa-laptop icon-fea" aria-hidden="true"></span>
+        
+        <Div className="card card_border p-lg-5 p-3 mb-4">
+          <Div className="card-body py-3 p-0">
+            <h3 className="block__title mb-lg-4">Content Block Features</h3>
+            <Div className="row feature-3 text-center">
+              <Div className="col-md-4 three-grids-columns mt-5">
+                <Span className="fa fa-laptop icon-fea" aria-hidden="true"></Span>
                 <a href="#">
 
                   <h4>Web Design</h4>
                 </a>
                 <p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio consectetur.</p>
 
-                <a href="#" class="actionbg">Read More</a>
-              </div>
-              <div class="col-md-4 three-grids-columns mt-5">
-                <span class="fa fa-paint-brush icon-fea" aria-hidden="true"></span>
+                <a href="#" className="actionbg">Read More</a>
+              </Div>
+              <Div className="col-md-4 three-grids-columns mt-5">
+                <Span className="fa fa-paint-brush icon-fea" aria-hidden="true"></Span>
                 <a href="#">
 
                   <h4>Graphic Design</h4>
                 </a>
                 <p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio consectetur.</p>
                 <a href="#" class="actionbg">Read More</a>
-              </div>
-              <div class="col-md-4 three-grids-columns mt-5">
+              </Div>
+              <Col md={4} three-grids-columns mt={5}>
                 <span class="fa fa-signal icon-fea" aria-hidden="true"></span>
                 <a href="#">
 
@@ -185,80 +184,62 @@ function Blocks (props) {
                 </a>
                 <p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio consectetur.</p>
                 <a href="#" class="actionbg">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- //content block style 6 -->
+              </Col>
+            </Div>
+          </Div>
+        </Div>
+       
 
-        <!-- content block style 7 -->
-        <div class="w3l-about1 card card_border p-lg-5 p-3 mb-4">
-          <div class="card-body py-3 p-0">
-            <h3 class="block__title mb-lg-4">Content Block Features with photo</h3>
-            <div class="row cwp23-content">
-              <div class="col-md-6 cwp23-text">
-                <div class="row cwp23-text-cols">
-                  <div class="col-md-6 column mt-4">
-                    <span class="fa fa-laptop icon-fea" aria-hidden="true"></span>
+        
+        <Div className="w3l-about1 card card_border p-lg-5 p-3 mb-4">
+          <Div className="card-body py-3 p-0">
+            <h3 className="block__title mb-lg-4">Content Block Features with photo</h3>
+            <Row className = "cwp23-content">
+              <Col md={6} className ="cwp23-text">
+                <Row className = "row cwp23-text-cols">
+                  <Col md={6} mt={4}>
+                    <Span className="fa fa-laptop icon-fea" aria-hidden="true"></Span>
                     <a href="#url">Web design</a>
                     <p>Type your text here... Lorem ipsum dolor sit amet. </p>
-                  </div>
-                  <div class="col-md-6 column mt-4">
+                  </Col>
+                  < Col md={6} mt={4}>
                     <span class="fa fa-paint-brush icon-fea" aria-hidden="true"></span>
                     <a href="#url">Graphic design</a>
                     <p>Type your text here... Lorem ipsum dolor sit amet. </p>
-                  </div>
-                  <div class="col-md-6 column mt-4">
-                    <span class="fa fa-signal icon-fea" aria-hidden="true"></span>
+                  </Div>
+                  <Div className="col-md-6 column mt-4">
+                    <Span className="fa fa-signal icon-fea" aria-hidden="true"></Span>
                     <a href="#url">Web development</a>
                     <p>Type your text here... Lorem ipsum dolor sit amet. </p>
-                  </div>
-                  <div class="col-md-6 column mt-4">
-                    <span class="fa fa-laptop icon-fea" aria-hidden="true"></span>
+                  </Div>
+                  <Div className ="col-md-6 column mt-4">
+                    <Span className="fa fa-laptop icon-fea" aria-hidden="true"></Span>
                     <a href="#url">Webdesign</a>
                     <p>Type your text here... Lorem ipsum dolor sit amet. </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 mt-md-0 mt-5 cwp23-img">
-                <img src="assets/images/template2.jpg" class="img-fluid rounded" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- //content block style 7 -->
+                  </Div>
+                </Row>
+              </Col>
+              <Div className ="col-md-6 mt-md-0 mt-5 cwp23-img">
+                <Image source={require('../../assets/images/template2.jpg')} class="img-fluid rounded" alt=""/>
+              </Div>
+            </Div>
+          </Div>
+        </Div>
+        
 
-      </div>
-      <!-- //content -->
+      </Div>
+ 
 
-    </div>
-    <!-- main content end-->
-  </section>
-  <!--footer section start-->
-  <footer class="dashboard">
-    <p>&copy 2020 Collective. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank"
-        class="text-primary">W3layouts.</a></p>
-  </footer>
-  <!--footer section end-->
-
-  <!--abrir e fechar o menu-->
-  <script>
-    function toggleMenu() {
-      let body = document.querySelector("body");
-      let hasCollapsed = body.classList.contains("sidebar-menu-collapsed");
-      if(hasCollapsed) {
-       body.classList.remove("sidebar-menu-collapsed");
-       body.classList.add("noscroll");
-      } else {
-        body.classList.remove("noscroll");
-        body.classList.add("sidebar-menu-collapsed");
-      };
-    }
+    </Div>
     
-  </script>
+  </Section>
+
+ 
 
 
-       </Body>
+
+
+</Body>
       
        
        </>
