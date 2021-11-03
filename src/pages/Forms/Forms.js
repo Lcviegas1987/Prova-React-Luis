@@ -165,10 +165,10 @@ function Forms (props){
                   </Col>
                   <Col md={4}>
                     <Label for="inputState" className="input__label">State</Label>
-                    <select id="inputState" className="form-control input-style">
-                      <option selected>Choose...</option>
-                      <option>...</option>
-                    </select>
+                    <Select id="inputState" className="form-control input-style">
+                      <Option selected>Choose...</Option>
+                      <Option>...</Option>
+                    </Select>
                   </Col>
                   <Col md={2}>
                     <Label for="inputZip" className="input__label">Zip</Label>
@@ -189,12 +189,11 @@ function Forms (props){
 
 
 
-        </section>
+        </Section>
        
-  </section>
- 
-
-
-        </>
+  
+    </>
     )
 }
+
+export default Forms
