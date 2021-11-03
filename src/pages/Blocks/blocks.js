@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from '../../assets/images/logo'
-import {nav, Section,Div,ListItem,ListGroup,span,Col, Input} from 'react-bootstrap'
+import {nav, Section,Div,ListItem,ListGroup,span,Col,Button} from '../../react-bootstrap'
+import Input from "../../components/micro/Forms/Input"
 
 
 
@@ -13,7 +14,7 @@ function Blocks (props) {
     <div>Home</div>
     <Title>Collective Admin Panel a Flat Bootstrap Responsive Website Template | Content Blocks :: W3Layouts</Title>
 
-    <Body className="sidebar-menu-collapsed">
+    <Body className="sidebar-menu-collapsed"></Body>
     <Div className="se-pre-con"></Div>
     <Section className="section 1"></Section>
  
@@ -34,14 +35,14 @@ function Blocks (props) {
        <a href="index.html"><Item className="fa fa-tachometer"></Item><span> Dashboard</span></a>
        </ListItem>
           <ListGroup as ="ul">
-          <LisItem><a href="cards.html"><i class="fa fa-cogs"></i> <span>Default cards</span></a></ListItem>
+          <ListItem><a href="cards.html"><i class="fa fa-cogs"></i> <span>Default cards</span></a></ListItem>
           <ListItem><a href="pricing.html"><i class="fa fa-table"></i> <span>Pricing tables</span></a></ListItem>
           <ListItem><a href="blocks.html"><i class="fa fa-th"></i> <span>Content blocks</span></a></ListItem>
           <ListItem><a href="forms.html"><i class="fa fa-file-text"></i> <span>Forms</span></a></ListItem>
         </ListGroup>
         <a class="toggle-btn" onclick="toggleMenu()">
-          <Item className="fa fa-angle-double-left menu-collapsed__left"><span>Collapse Sidebar</span></Item>
-          <Item class="fa fa-angle-double-right menu-collapsed__right"></Item>
+          <ListItem className="fa fa-angle-double-left menu-collapsed__left"><span>Collapse Sidebar</span></ListItem>
+          <ListItem class="fa fa-angle-double-right menu-collapsed__right"></ListItem>
         </a>
       
       <Div className="header sticky-header">
@@ -87,10 +88,10 @@ function Blocks (props) {
     
     
    
-    <Div className="main-content">
+    <Div className="main-content"></Div>
 
       
-      <Div className =" container-fluid content-top-gap">
+      <Div className =" container-fluid content-top-gap"></Div>
 
         
         <nav aria-label="breadcrumb" class="mb-4">
@@ -224,25 +225,8 @@ function Blocks (props) {
               </Col>
             </Div>
           </Div>
-        </Div>
         
-
-      </Div>
- 
-
-    </Div>
-    
-  </Section>
-
- 
-
-
-
-
-</Body>
-      
-       
-       </>
+             </>
     
          )
 
